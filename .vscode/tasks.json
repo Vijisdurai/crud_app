@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Dotnet Server",
+      "type": "shell",
+      "command": "dotnet run",
+      "options": {
+        "cwd": "C:\\CRUDapp\\src\\ProductionApp",
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": ["/d", "/c"]
+        }
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "app",
+        "focus": false,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Run React Client",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "C:\\CRUDapp\\src\\productionReactApp",
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": ["/d", "/c"]
+        }
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "app",
+        "focus": false,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Run Full App",
+      "dependsOn": [
+        "Run Dotnet Server",
+        "Run React Client"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

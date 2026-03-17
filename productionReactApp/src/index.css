@@ -1,0 +1,48 @@
+/* FILE: src/index.css */
+
+/* Global reset & base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Century Gothic", "Apple Gothic", "Calibri", "Segoe UI", Arial, sans-serif;
+  background-color: #F2F2F2;
+  color: #262626;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #009ADD;
+}
+
+/* DataGrid stripe rows (alternate bg via className added in grid) */
+.stripe-row {
+  background-color: #F2F2F2 !important;
+}
+
+/* Focus ring improvement */
+*:focus-visible {
+  outline: 2px solid #009ADD;
+  outline-offset: 2px;
+}

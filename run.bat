@@ -1,0 +1,1 @@
+wt new-tab -d "C:\CRUDapp\src\ProductionApp" --title "Dotnet Server" cmd /k "dotnet run" ; new-tab -d "C:\CRUDapp\src\productionReactApp" --title "React Client" cmd /k "npm run dev"
